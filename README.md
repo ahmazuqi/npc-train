@@ -1,17 +1,18 @@
-NPC Kereta By Noctyx
+# NPC Kereta By Noctyx
 
-Sistem NPC Kereta untuk SA-MP / Open.MP menggunakan NPC Recorder (.rec) dan beberapa NPC mode yang berjalan secara bersamaan untuk mensimulasikan perjalanan kereta otomatis.
+Sistem NPC Kereta untuk SA-MP / Open.MP menggunakan file recording (.rec) untuk menjalankan kereta otomatis di dalam server.
 
-Features
+## Features
 
-- NPC Kereta otomatis
+- NPC kereta otomatis
 - Menggunakan file recording (.rec)
-- Mendukung beberapa NPC kereta
-- Mudah dipasang pada server SA-MP maupun Open.MP
-- Source code Pawn (.pwn) disertakan
+- Mendukung beberapa NPC sekaligus
+- Kompatibel dengan SA-MP dan Open.MP
+- Source code Pawn disertakan
 
-File Structure
+## File Structure
 
+```text
 npckeretabynoctyx/
 │
 ├── system_kereta.pwn
@@ -30,44 +31,47 @@ npckeretabynoctyx/
     │
     └── recordings/
         └── [SAP]Kereta[40].rec
+```
 
-Installation
+## Installation
 
-1. Ekstrak seluruh file ke folder server SA-MP/Open.MP.
-2. Salin file NPC ke folder:
+1. Extract semua file ke direktori server.
+2. Pastikan seluruh file NPC berada di folder:
 
+```text
 npcmodes/
+```
 
-3. Pastikan file recording berada di:
+3. Pastikan file recording berada di folder:
 
+```text
 npcmodes/recordings/
+```
 
-4. Tambahkan NPC pada script server menggunakan:
+4. Jalankan NPC menggunakan:
 
-ConnectNPC("NamaNPC", "system_kereta");
+```pawn
+ConnectNPC("Train_1", "system_kereta");
+ConnectNPC("Train_2", "system_kereta2");
+ConnectNPC("Train_3", "system_kereta3");
+ConnectNPC("Train_4", "system_kereta4");
+ConnectNPC("Train_5", "system_kereta5");
+```
 
-Sesuaikan dengan nama NPC mode yang digunakan:
+## Requirements
 
-system_kereta
-system_kereta2
-system_kereta3
-system_kereta4
-system_kereta5
+- SA-MP 0.3.7 R2 atau lebih baru
+- Open.MP (Recommended)
+- NPC Recording Support
 
-5. Jalankan server dan pastikan plugin NPC aktif.
+## Credits
 
-Requirements
+**Author:** Noctyx
 
-- SA-MP 0.3.7 atau lebih baru
-- Open.MP (recommended)
-- NPC Recorder Support
+**Recording:** [SAP]Kereta[40]
 
-Credits
+## License
 
-- Original Author: Noctyx
-- Recording: [SAP]Kereta[40]
+Free to use and modify.
 
-License
-
-Gunakan dan modifikasi sesuai kebutuhan server Anda.
-Tetap berikan kredit kepada author asli apabila digunakan secara publik.
+Please keep the original credits when redistributing this project.
